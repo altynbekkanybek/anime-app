@@ -264,7 +264,9 @@ submit.addEventListener("click", (event) => {
 
     const ninjas = JSON.parse(localStorage.getItem("ninjas"))
 
-    localStorage.setItem("ninjas", JSON.stringify([...ninjas, data]))
+    localStorage.setItem("ninjas", JSON.stringify(
+      [...ninjas, data]
+      ))
     window.location.reload();
   }else {
     error.innerHTML = "Not all added !"
